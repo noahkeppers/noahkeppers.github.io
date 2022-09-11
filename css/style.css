@@ -4,7 +4,7 @@
   margin: auto;
 
   display: grid;
-  gap: 60px;
+  gap: 30px;
   grid-template-areas:
     "photo"
     "bio";
@@ -12,11 +12,12 @@
   align-items: center;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .wrapper {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "photo  bio";
+    gap: 60px;
   }
 }
 
@@ -26,8 +27,18 @@ svg {
 
 .photo {
   grid-area: photo;
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
+
+  margin: auto;
+  padding-top: 2em;
+}
+
+@media (min-width: 800px) {
+  .photo {
+    max-width: 100%;
+    padding-top: 0;
+  }
 }
 
 .bio {
@@ -41,8 +52,10 @@ svg {
   color: #00749A;
   font-weight: 700;
   font-size: 3em;
+  line-height: 1.25em;
 
-  margin-bottom: 1em;
+  margin: 0;
+  margin-bottom: 0.75em;
 }
 
 .bio p {
@@ -59,6 +72,16 @@ svg {
 
 .bio a:hover {
   color: #6B9CB6;
+}
+
+.social {
+  padding-bottom: 2em;
+}
+
+@media (min-width: 800px) {
+  .social {
+    padding-bottom: 0;
+  }
 }
 
 .icon {
