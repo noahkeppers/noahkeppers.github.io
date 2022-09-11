@@ -6,22 +6,55 @@
 
 .bio {
   grid-area: bio;
-  align-content: center;
-  justify-content: center;
+
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5em;
 }
 
+.bio h1 {
+  color: #00749A;
+  font-weight: 700;
+  font-size: 3em;
+
+  margin-bottom: 1em;
+}
+
+.bio p {
+  padding-bottom: 0.5em;
+}
+
+.bio a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #00749A;
+
+  transition: 0.2s;
+}
+
+.bio a:hover {
+  color: #6B9CB6;
+}
+
+.social div {
+  margin-top: 3em;
+}
+
+
 .wrapper {
-  width: 80%;
+  width: 80vw;
+  height: 100vh;
   margin: auto;
 
   display: grid;
-  gap: 20px;
+  gap: 60px;
   grid-template-areas:
     "photo"
     "bio";
+
+  align-items: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 900px) {
   .wrapper {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
