@@ -1,3 +1,29 @@
+.wrapper {
+  width: 80vw;
+  height: 100vh;
+  margin: auto;
+
+  display: grid;
+  gap: 60px;
+  grid-template-areas:
+    "photo"
+    "bio";
+
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "photo  bio";
+  }
+}
+
+svg {
+  fill: currentColor;
+}
+
 .photo {
   grid-area: photo;
   max-width: 100%;
@@ -35,29 +61,18 @@
   color: #6B9CB6;
 }
 
-.social div {
-  margin-top: 3em;
+.icon {
+  width: 32px;
+  padding: 0 5px;
+
+  color: #00749A;
+  transition: 0.2s;
 }
 
-
-.wrapper {
-  width: 80vw;
-  height: 100vh;
-  margin: auto;
-
-  display: grid;
-  gap: 60px;
-  grid-template-areas:
-    "photo"
-    "bio";
-
-  align-items: center;
+.icon:hover {
+  color: #6B9CB6;
 }
 
-@media (min-width: 900px) {
-  .wrapper {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "photo  bio";
-  }
+.first {
+  padding-left: 0;
 }
